@@ -64,9 +64,7 @@
             <h2 class="text-2xl font-semibold mb-6 text-text">Project Gallery</h2>
             <div class="space-y-6">
               <!-- Main Image/GIF -->
-              <div
-                class="relative rounded-lg overflow-hidden bg-background-soft cursor-pointer group"
-              >
+              <div class="relative rounded-lg overflow-hidden cursor-pointer group">
                 <!-- Fixed size container for consistent display -->
                 <div class="image-container">
                   <img

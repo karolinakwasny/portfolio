@@ -13,19 +13,51 @@
         developer.
       </p>
       <div class="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
-        <a
-          href="/#projects"
-          class="bg-text text-background px-6 md:px-8 py-3 rounded-md hover:bg-border font-medium transition-colors"
+        <button
+          @click="scrollToSection('projects')"
+          class="bg-text text-background px-6 md:px-8 py-3 rounded-md hover:bg-border font-medium transition-colors text-center"
         >
           View My Work
-        </a>
-        <a
-          href="/#contact"
-          class="border border-border px-6 md:px-8 py-3 rounded-md hover:border-greenAccent font-medium text-text transition-colors"
+        </button>
+        <button
+          @click="scrollToSection('contact')"
+          class="border border-border px-6 md:px-8 py-3 rounded-md hover:border-greenAccent font-medium text-text transition-colors text-center"
         >
           Get In Touch
-        </a>
+        </button>
       </div>
     </div>
   </section>
 </template>
+
+<script setup>
+import { useRouter } from 'vue-router';
+
+const router = useRouter();
+
+const scrollToSection = (sectionId) => {
+  console.log('HeroSection - Scrolling to section:', sectionId, 'Current route:', router.currentRoute.value.name);
+  
+  // If we're not on the home page, navigate there first
+  if (router.currentRoute.value.name !== 'Home') {
+    console.log('HeroSection - Not on home page, navigating to home first');
+    router.push('/').then(() => {
+      setTimeout(() => {
+        const element = document.getElementById(sectionId);
+        console.log('HeroSection - Element found:', element);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 300); // Increased timeout for GitHub Pages
+    });
+  } else {
+    // We're already on home page, just scroll
+    console.log('HeroSection - Already on home page, scrolling directly');
+    const element = document.getElementById(sectionId);
+    console.log('HeroSection - Element found:', element);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+};
+</script>

@@ -1,7 +1,7 @@
 <template>
   <section v-if="project.images && project.images.length > 0">
-    <h2 class="text-2xl font-semibold mb-6 text-text">Project Gallery</h2>
-    <div class="space-y-6">
+    <h2 class="text-xl sm:text-2xl font-semibold mb-4 sm:mb-6 text-text">Project Gallery</h2>
+    <div class="space-y-4 sm:space-y-6">
       <!-- Main Image/GIF -->
       <div class="relative rounded-lg overflow-hidden cursor-pointer group">
         <!-- Fixed size container for consistent display -->
@@ -19,7 +19,7 @@
           class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-background/20"
         >
           <div class="bg-background/80 rounded-full p-2">
-            <svg class="w-6 h-6 text-text" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg class="w-5 h-5 sm:w-6 sm:h-6 text-text" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path
                 stroke-linecap="round"
                 stroke-linejoin="round"
@@ -32,13 +32,13 @@
       </div>
 
       <!-- Thumbnail Gallery -->
-      <div v-if="project.images.length > 1" class="flex gap-3 overflow-x-auto pb-2">
+      <div v-if="project.images.length > 1" class="flex gap-2 sm:gap-3 overflow-x-auto pb-2">
         <button
           v-for="(image, index) in project.images"
           :key="index"
           @click="selectedImage = image"
           :class="[
-            'flex-shrink-0 w-20 h-16 rounded-md overflow-hidden border-2 transition-colors',
+            'flex-shrink-0 w-16 h-12 sm:w-20 sm:h-16 rounded-md overflow-hidden border-2 transition-colors',
             selectedImage === image
               ? 'border-greenAccent'
               : 'border-border hover:border-greenAccent/50',

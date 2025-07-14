@@ -1,10 +1,10 @@
 <template>
   <div class="min-h-screen bg-background text-text">
-    <div v-if="project" class="max-w-6xl mx-auto py-8 px-6">
+    <div v-if="project" class="max-w-6xl mx-auto py-4 md:py-8 px-4 md:px-6">
       <!-- Back Navigation -->
       <router-link
         to="/"
-        class="inline-flex items-center text-greenAccent hover:text-greenAccent/80 transition-colors mb-8"
+        class="inline-flex items-center text-greenAccent hover:text-greenAccent/80 transition-colors mb-6 md:mb-8"
       >
         <ArrowLeft class="w-4 h-4 mr-2" />
         Back to Projects
@@ -14,9 +14,14 @@
       <ProjectDetailHeader :project="project" />
 
       <!-- Main Content Grid -->
-      <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-12">
         <!-- Main Content -->
-        <div class="lg:col-span-2 space-y-12">
+        <div class="lg:col-span-2 space-y-6 md:space-y-8 lg:space-y-12">
+          <!-- Sidebar on mobile (moved up) -->
+          <div class="lg:hidden">
+            <ProjectSidebar :project="project" @toggle-demo="toggleDemo" />
+          </div>
+          
           <!-- Media Gallery -->
           <ProjectGallery ref="galleryRef" :project="project" @open-lightbox="openLightbox" />
 
@@ -24,8 +29,10 @@
           <ProjectContent :project="project" />
         </div>
 
-        <!-- Sidebar -->
-        <ProjectSidebar :project="project" @toggle-demo="toggleDemo" />
+        <!-- Sidebar (desktop only) -->
+        <div class="hidden lg:block">
+          <ProjectSidebar :project="project" @toggle-demo="toggleDemo" />
+        </div>
       </div>
 
       <!-- Interactive Demo Modal -->
@@ -47,9 +54,9 @@
     </div>
 
     <!-- Project Not Found -->
-    <div v-else class="max-w-4xl mx-auto py-20 px-6 text-center">
-      <h1 class="text-4xl font-bold text-text mb-4">Project Not Found</h1>
-      <p class="text-text-secondary mb-8">The project you're looking for doesn't exist.</p>
+    <div v-else class="max-w-4xl mx-auto py-12 md:py-20 px-4 md:px-6 text-center">
+      <h1 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-text mb-4">Project Not Found</h1>
+      <p class="text-sm sm:text-base text-text-secondary mb-6 md:mb-8">The project you're looking for doesn't exist.</p>
       <router-link
         to="/"
         class="inline-flex items-center text-greenAccent hover:text-greenAccent/80 transition-colors"

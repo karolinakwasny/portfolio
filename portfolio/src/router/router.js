@@ -1,5 +1,5 @@
 // src/router/index.js
-import { createRouter, createWebHistory } from "vue-router";
+import { createRouter, createWebHashHistory } from "vue-router";
 import ProjectDetail from "../views/ProjectDetail.vue";
 import MyHome from "../views/MyHome.vue";
 
@@ -9,7 +9,7 @@ const routes = [
 ];
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHashHistory(),
   routes,
   scrollBehavior(to, from, savedPosition) {
     if (to.hash) {

@@ -13,7 +13,7 @@
 
 <script setup>
 import { Mail, Github, Linkedin } from "lucide-vue-next";
-import ContactButton from "./ContactButton.vue";
+import ContactButton from "../ContactButton.vue";
 
 const contacts = [
   {

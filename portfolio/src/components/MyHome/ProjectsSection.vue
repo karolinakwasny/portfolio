@@ -15,6 +15,6 @@
 </template>
 
 <script setup>
-import ProjectCard from "./ProjectCard.vue";
-import { projects } from "../data/projects.js";
+import ProjectCard from "../ProjectCard.vue";
+import { projects } from "../../data/projects.js";
 </script>

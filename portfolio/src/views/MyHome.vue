@@ -7,9 +7,9 @@
 </template>
 
 <script setup>
-import HeroSection from "@/components/HeroSection.vue";
-import ProjectsSection from "@/components/ProjectsSection.vue";
-import ContactSection from "@/components/ContactSection.vue";
+import HeroSection from "@/components/MyHome/HeroSection.vue";
+import ProjectsSection from "@/components/MyHome/ProjectsSection.vue";
+import ContactSection from "@/components/MyHome/ContactSection.vue";
 </script>
 <script>
 export default {

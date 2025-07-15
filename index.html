@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" href="/portfolio/favicon.ico" />
+    <link rel="icon" href="/portfolio/faviconGreenKK.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Karolina Kwaśny - Portfolio</title>
 
@@ -13,28 +13,34 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Source+Sans+Pro:wght@300;400;600;700&family=Roboto:wght@300;400;500;700&display=swap&subset=latin,latin-ext"
       rel="stylesheet"
     />
-    
+
     <!-- GitHub Pages SPA redirect script -->
     <script type="text/javascript">
       // GitHub Pages SPA redirect handler
-      (function(l) {
-        if (l.search[1] === '/' ) {
-          var decoded = l.search.slice(1).split('&').map(function(s) { 
-            return s.replace(/~and~/g, '&')
-          }).join('?');
-          
+      (function (l) {
+        if (l.search[1] === "/") {
+          var decoded = l.search
+            .slice(1)
+            .split("&")
+            .map(function (s) {
+              return s.replace(/~and~/g, "&");
+            })
+            .join("?");
+
           // Remove the leading ? if it exists and reconstruct the path
-          var newPath = decoded.startsWith('?') ? decoded.slice(1) : decoded;
-          newPath = newPath.startsWith('/') ? newPath : '/' + newPath;
-          
-          window.history.replaceState(null, null,
-              l.pathname.slice(0, -1) + newPath + l.hash
+          var newPath = decoded.startsWith("?") ? decoded.slice(1) : decoded;
+          newPath = newPath.startsWith("/") ? newPath : "/" + newPath;
+
+          window.history.replaceState(
+            null,
+            null,
+            l.pathname.slice(0, -1) + newPath + l.hash
           );
         }
-      }(window.location))
+      })(window.location);
     </script>
-    <script type="module" crossorigin src="/portfolio/assets/index-L6no1lOg.js"></script>
-    <link rel="stylesheet" crossorigin href="/portfolio/assets/index-Auuy5p3q.css">
+    <script type="module" crossorigin src="/portfolio/assets/index-DCwuZRLz.js"></script>
+    <link rel="stylesheet" crossorigin href="/portfolio/assets/index-BoRLMWib.css">
   </head>
   <body>
     <div id="app"></div>

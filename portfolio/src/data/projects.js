@@ -1,7 +1,4 @@
 import {
-  Mail,
-  Github,
-  Linkedin,
   Terminal,
   Code,
   Users,
@@ -19,7 +16,7 @@ export const projects = [
     id: "ft_transcendence",
     title: "ft_transcendence",
     description:
-      "A real-time multiplayer Pong game with user authentication, chat system, and tournament features. Built with modern web technologies.",
+      "A 3D Pong game with user authentication, 2FA, multi-language support, accessibility features, and tournament features. Built with modern web technologies.",
     longDescription: `
       ft_transcendence is a comprehensive web application that recreates the classic Pong game with modern features.
       The project includes real-time multiplayer gameplay, user authentication and profiles, a chat system for
@@ -38,11 +35,15 @@ export const projects = [
     tech: [
       "React",
       "Django",
-      "PostgreSQL",
       "WebSocket",
+      "PostgreSQL",
+      "Three.js",
+      "Docker",
+      "Docker Compose",
       "Nginx",
       "JWT",
-      "Docker",
+      "Django REST Framework",
+      "OAuth2 (42 API)",
       "Neon",
       "Render",
     ],

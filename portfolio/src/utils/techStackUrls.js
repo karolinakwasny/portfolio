@@ -10,9 +10,11 @@ export const techStackUrls = {
   JavaScript: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
   TypeScript: "https://www.typescriptlang.org/",
   "Tailwind CSS": "https://tailwindcss.com/",
+  "Three.js": "https://threejs.org/manual/#en/fundamentals",
 
   // Backend
   Django: "https://www.djangoproject.com/",
+  "Django REST Framework": "https://www.django-rest-framework.org/",
   "Node.js": "https://nodejs.org/",
   Express: "https://expressjs.com/",
   FastAPI: "https://fastapi.tiangolo.com/",
@@ -34,6 +36,7 @@ export const techStackUrls = {
 
   // DevOps & Tools
   Docker: "https://www.docker.com/",
+  "Docker Compose": "https://docs.docker.com/compose/",
   Nginx: "https://nginx.org/",
   Git: "https://git-scm.com/",
   GitHub: "https://github.com/",
@@ -44,7 +47,7 @@ export const techStackUrls = {
   // Protocols & Technologies
   WebSocket: "https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API",
   JWT: "https://jwt.io/introduction",
-  OAuth: "https://oauth.net/",
+  "OAuth2 (42 API)": "https://api.intra.42.fr/apidoc",
   "REST API": "https://restfulapi.net/",
   GraphQL: "https://graphql.org/",
 

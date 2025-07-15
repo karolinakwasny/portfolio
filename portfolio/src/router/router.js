@@ -12,7 +12,7 @@ const routes = [
 
 // Use history routing for production (clean URLs) and hash for development
 const isProduction = import.meta.env.PROD;
-const base = isProduction ? '/portfolio/' : '/';
+const base = isProduction ? "/portfolio/" : "/";
 
 const router = createRouter({
   history: isProduction ? createWebHistory(base) : createWebHashHistory(),

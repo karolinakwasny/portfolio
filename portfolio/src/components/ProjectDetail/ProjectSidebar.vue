@@ -43,7 +43,9 @@
         </div>
         <div v-if="project.status" class="flex flex-col">
           <span class="text-text-secondary text-xs sm:text-sm">Status:</span>
-          <span class="text-sm sm:text-base text-greenAccent font-medium">{{ project.status }}</span>
+          <span class="text-sm sm:text-base text-greenAccent font-medium">{{
+            project.status
+          }}</span>
         </div>
       </div>
     </section>

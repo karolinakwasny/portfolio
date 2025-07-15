@@ -12,6 +12,7 @@ import {
   Puzzle,
   GitBranch,
 } from "lucide-vue-next";
+import { getProjectImages } from "../utils/assetUrls.js";
 
 export const projects = [
   {
@@ -60,12 +61,12 @@ export const projects = [
       "Team collaboration and code review processes",
       "Database design for gaming applications",
     ],
-    images: [
+    images: getProjectImages([
       "/gifs/ft_transcendence.gif",
       "/images/ft_transcendence/gameplay.png",
       "/images/ft_transcendence/gameplay1.png",
       "/images/ft_transcendence/gameplay2.png",
-    ],
+    ]),
     demoUrl: "https://transcendence-cs0d.onrender.com",
     githubUrl: "https://github.com/karolinakwasny/ft_transcendence",
     highlights: [
@@ -112,12 +113,9 @@ export const projects = [
       "Low-level memory management techniques",
       "Shell scripting and command line interface design",
     ],
-    images: [
-      "/gifs/minishell.gif",
-      "/images/minishell/commands.png",
-      "/images/minishell/pipes.png",
-      "/images/minishell/redirections.png",
-    ],
+    images: getProjectImages([
+      // Only ft_transcendence images exist, others are empty for now
+    ]),
     demoUrl: null,
     githubUrl: "https://github.com/yourusername/minishell",
     highlights: [
@@ -163,12 +161,9 @@ export const projects = [
       "Performance optimization in real-time applications",
       "Game engine architecture and design patterns",
     ],
-    images: [
-      "/images/cub3d/gameplay.gif",
-      "/images/cub3d/raycasting.png",
-      "/images/cub3d/textures.png",
-      "/images/cub3d/minimap.png",
-    ],
+    images: getProjectImages([
+      // Cub3d images not available yet
+    ]),
     demoUrl: null,
     githubUrl: "https://github.com/yourusername/cub3d",
     highlights: [
@@ -197,7 +192,7 @@ export const projects = [
       "Memory management",
     ],
     learnings: ["Network programming", "Protocol design", "Server architecture"],
-    images: ["/images/ft_irc/server.png"],
+    images: getProjectImages([]),
     demoUrl: null,
     githubUrl: "https://github.com/yourusername/ft_irc",
     highlights: ["Handles 100+ concurrent clients", "Full IRC protocol compliance"],

@@ -16,7 +16,9 @@
       <h2 class="text-xl sm:text-2xl font-semibold mb-4 sm:mb-6 text-text">Key Challenges</h2>
       <div class="space-y-4">
         <div v-for="(challenge, index) in project.challenges" :key="index" class="flex items-start">
-          <div class="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-greenAccent mt-2 mr-3 sm:mr-4 flex-shrink-0"></div>
+          <div
+            class="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-greenAccent mt-2 mr-3 sm:mr-4 flex-shrink-0"
+          ></div>
           <p class="text-sm sm:text-base text-text leading-relaxed">{{ challenge }}</p>
         </div>
       </div>

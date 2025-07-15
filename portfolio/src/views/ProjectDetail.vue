@@ -21,7 +21,7 @@
           <div class="lg:hidden">
             <ProjectSidebar :project="project" @toggle-demo="toggleDemo" />
           </div>
-          
+
           <!-- Media Gallery -->
           <ProjectGallery ref="galleryRef" :project="project" @open-lightbox="openLightbox" />
 
@@ -56,7 +56,9 @@
     <!-- Project Not Found -->
     <div v-else class="max-w-4xl mx-auto py-12 md:py-20 px-4 md:px-6 text-center">
       <h1 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-text mb-4">Project Not Found</h1>
-      <p class="text-sm sm:text-base text-text-secondary mb-6 md:mb-8">The project you're looking for doesn't exist.</p>
+      <p class="text-sm sm:text-base text-text-secondary mb-6 md:mb-8">
+        The project you're looking for doesn't exist.
+      </p>
       <router-link
         to="/"
         class="inline-flex items-center text-greenAccent hover:text-greenAccent/80 transition-colors"
@@ -121,7 +123,13 @@ const handleKeydown = (event) => {
 
 onMounted(() => {
   const id = route.params.id;
+  console.log("ProjectDetail mounted - Looking for project ID:", id);
+  console.log(
+    "Available projects:",
+    projects.map((p) => p.id)
+  );
   project.value = projects.find((p) => p.id === id);
+  console.log("Found project:", project.value ? project.value.title : "NOT FOUND");
   document.addEventListener("keydown", handleKeydown);
 });
 

@@ -31,32 +31,37 @@
 </template>
 
 <script setup>
-import { useRouter } from 'vue-router';
+import { useRouter } from "vue-router";
 
 const router = useRouter();
 
 const scrollToSection = (sectionId) => {
-  console.log('HeroSection - Scrolling to section:', sectionId, 'Current route:', router.currentRoute.value.name);
-  
+  console.log(
+    "HeroSection - Scrolling to section:",
+    sectionId,
+    "Current route:",
+    router.currentRoute.value.name
+  );
+
   // If we're not on the home page, navigate there first
-  if (router.currentRoute.value.name !== 'Home') {
-    console.log('HeroSection - Not on home page, navigating to home first');
-    router.push('/').then(() => {
+  if (router.currentRoute.value.name !== "Home") {
+    console.log("HeroSection - Not on home page, navigating to home first");
+    router.push("/").then(() => {
       setTimeout(() => {
         const element = document.getElementById(sectionId);
-        console.log('HeroSection - Element found:', element);
+        console.log("HeroSection - Element found:", element);
         if (element) {
-          element.scrollIntoView({ behavior: 'smooth' });
+          element.scrollIntoView({ behavior: "smooth" });
         }
       }, 300); // Increased timeout for GitHub Pages
     });
   } else {
     // We're already on home page, just scroll
-    console.log('HeroSection - Already on home page, scrolling directly');
+    console.log("HeroSection - Already on home page, scrolling directly");
     const element = document.getElementById(sectionId);
-    console.log('HeroSection - Element found:', element);
+    console.log("HeroSection - Element found:", element);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: "smooth" });
     }
   }
 };

@@ -2,10 +2,16 @@
   <header class="mb-8 md:mb-12">
     <div class="flex flex-col sm:flex-row sm:items-center mb-6">
       <div class="p-3 bg-background-soft rounded-lg mr-0 sm:mr-4 mb-4 sm:mb-0 self-start">
-        <component v-if="project.icon" :is="project.icon" class="w-6 h-6 sm:w-8 sm:h-8 text-greenAccent" />
+        <component
+          v-if="project.icon"
+          :is="project.icon"
+          class="w-6 h-6 sm:w-8 sm:h-8 text-greenAccent"
+        />
       </div>
       <div class="flex-1">
-        <h1 class="text-2xl sm:text-3xl lg:text-4xl font-bold font-mono text-text mb-2">{{ project.title }}</h1>
+        <h1 class="text-2xl sm:text-3xl lg:text-4xl font-bold font-mono text-text mb-2">
+          {{ project.title }}
+        </h1>
         <div class="flex flex-wrap items-center gap-2 sm:gap-4">
           <span
             class="text-xs sm:text-sm bg-greenAccent/20 text-greenAccent px-2 sm:px-3 py-1 rounded-full font-medium"
@@ -18,7 +24,9 @@
       </div>
     </div>
 
-    <p class="text-base sm:text-lg lg:text-xl text-text leading-relaxed mb-6">{{ project.description }}</p>
+    <p class="text-base sm:text-lg lg:text-xl text-text leading-relaxed mb-6">
+      {{ project.description }}
+    </p>
 
     <!-- Action Buttons -->
     <div class="flex flex-col sm:flex-row gap-3 sm:gap-4">

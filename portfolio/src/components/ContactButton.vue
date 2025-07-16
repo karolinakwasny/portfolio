@@ -11,7 +11,7 @@
       class="absolute -top-1 -right-1 p-1 bg-background border border-border rounded hover:border-greenAccent hover:bg-border transition-colors"
       :title="`Copy ${label.toLowerCase()}`"
     >
-      <Copy class="w-3 h-3 text-text" />
+      <icons.Copy class="w-3 h-3 text-text" />
     </button>
 
     <div
@@ -25,7 +25,7 @@
 
 <script setup>
 import { ref, computed } from "vue";
-import { Copy } from "lucide-vue-next";
+import { icons } from "../data/icons.js";
 
 const props = defineProps({
   label: String,

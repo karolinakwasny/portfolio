@@ -11,7 +11,7 @@
       <div class="flex justify-between items-center mb-6">
         <h3 class="text-2xl font-semibold text-text">{{ project.title }} - Interactive Demo</h3>
         <button @click="$emit('close')" class="text-text-secondary hover:text-text">
-          <X class="w-6 h-6" />
+          <icons.X class="w-6 h-6" />
         </button>
       </div>
 
@@ -32,7 +32,7 @@
 </template>
 
 <script setup>
-import { X } from "lucide-vue-next";
+import { icons } from "../../data/icons.js";
 
 defineProps({
   project: {

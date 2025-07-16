@@ -29,7 +29,9 @@
       <h2 class="text-xl sm:text-2xl font-semibold mb-4 sm:mb-6 text-text">What I Learned</h2>
       <div class="space-y-4">
         <div v-for="(learning, index) in project.learnings" :key="index" class="flex items-start">
-          <CheckCircle class="w-4 h-4 sm:w-5 sm:h-5 text-greenAccent mt-0.5 mr-3 flex-shrink-0" />
+          <icons.CheckCircle
+            class="w-4 h-4 sm:w-5 sm:h-5 text-greenAccent mt-0.5 mr-3 flex-shrink-0"
+          />
           <p class="text-sm sm:text-base text-text leading-relaxed">{{ learning }}</p>
         </div>
       </div>
@@ -38,7 +40,7 @@
 </template>
 
 <script setup>
-import { CheckCircle } from "lucide-vue-next";
+import { icons } from "../../data/icons.js";
 
 defineProps({
   project: {

@@ -23,7 +23,7 @@
       <h3 class="text-lg sm:text-xl font-semibold mb-3 sm:mb-4 text-text">Key Highlights</h3>
       <div class="space-y-3">
         <div v-for="(highlight, index) in project.highlights" :key="index" class="flex items-start">
-          <Star class="w-3 h-3 sm:w-4 sm:h-4 text-greenAccent mt-1 mr-3 flex-shrink-0" />
+          <icons.Star class="w-3 h-3 sm:w-4 sm:h-4 text-greenAccent mt-1 mr-3 flex-shrink-0" />
           <p class="text-xs sm:text-sm text-text">{{ highlight }}</p>
         </div>
       </div>
@@ -56,7 +56,7 @@
 </template>
 
 <script setup>
-import { Star } from "lucide-vue-next";
+import { icons } from "../../data/icons.js";
 import InteractiveDemo from "./InteractiveDemo.vue";
 import { techStackUrls } from "../../utils/techStackUrls.js";
 

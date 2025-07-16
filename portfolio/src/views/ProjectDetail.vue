@@ -6,7 +6,7 @@
         to="/"
         class="inline-flex items-center text-greenAccent hover:text-greenAccent/80 transition-colors mb-6 md:mb-8"
       >
-        <ArrowLeft class="w-4 h-4 mr-2" />
+        <icons.ArrowLeft class="w-4 h-4 mr-2" />
         Back to Projects
       </router-link>
 
@@ -63,7 +63,7 @@
         to="/"
         class="inline-flex items-center text-greenAccent hover:text-greenAccent/80 transition-colors"
       >
-        <ArrowLeft class="w-4 h-4 mr-2" />
+        <icons.ArrowLeft class="w-4 h-4 mr-2" />
         Back to Projects
       </router-link>
     </div>
@@ -73,7 +73,7 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from "vue";
 import { useRoute } from "vue-router";
-import { ArrowLeft } from "lucide-vue-next";
+import { icons } from "../data/icons.js";
 import { projects } from "../data/projects.js";
 import ProjectDetailHeader from "../components/ProjectDetail/ProjectDetailHeader.vue";
 import ProjectGallery from "../components/ProjectDetail/ProjectGallery.vue";

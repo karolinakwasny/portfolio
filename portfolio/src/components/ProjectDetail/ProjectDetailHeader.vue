@@ -36,7 +36,7 @@
         target="_blank"
         class="inline-flex items-center justify-center bg-greenAccent text-background px-4 sm:px-6 py-2 sm:py-3 rounded-lg font-semibold hover:bg-greenAccent/90 transition-colors text-sm sm:text-base"
       >
-        <Github class="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
+        <icons.Github class="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
         View Code
       </a>
       <a
@@ -45,7 +45,7 @@
         target="_blank"
         class="inline-flex items-center justify-center border border-greenAccent text-greenAccent px-4 sm:px-6 py-2 sm:py-3 rounded-lg font-semibold hover:bg-greenAccent/10 transition-colors text-sm sm:text-base"
       >
-        <ExternalLink class="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
+        <icons.ExternalLink class="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
         Live Demo
       </a>
     </div>
@@ -53,7 +53,7 @@
 </template>
 
 <script setup>
-import { Github, ExternalLink } from "lucide-vue-next";
+import { icons } from "../../data/icons.js";
 
 defineProps({
   project: {

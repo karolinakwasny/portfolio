@@ -10,7 +10,7 @@
         @click="closeLightbox"
         class="absolute top-4 right-4 z-10 bg-background/80 hover:bg-background text-text rounded-full p-2 transition-colors"
       >
-        <X class="w-6 h-6" />
+        <icons.X class="w-6 h-6" />
       </button>
 
       <!-- Navigation arrows -->
@@ -19,7 +19,7 @@
         @click.stop="previousImage"
         class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-background/80 hover:bg-background text-text rounded-full p-2 transition-colors"
       >
-        <ChevronLeft class="w-6 h-6" />
+        <icons.ChevronLeft class="w-6 h-6" />
       </button>
 
       <button
@@ -27,7 +27,7 @@
         @click.stop="nextImage"
         class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-background/80 hover:bg-background text-text rounded-full p-2 transition-colors"
       >
-        <ChevronRight class="w-6 h-6" />
+        <icons.ChevronRight class="w-6 h-6" />
       </button>
 
       <!-- Main lightbox image -->
@@ -45,7 +45,7 @@
 </template>
 
 <script setup>
-import { X, ChevronLeft, ChevronRight } from "lucide-vue-next";
+import { icons } from "../../data/icons.js";
 
 const props = defineProps({
   lightboxImage: String,

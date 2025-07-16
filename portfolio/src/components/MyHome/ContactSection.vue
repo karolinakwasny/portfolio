@@ -12,27 +12,27 @@
 </template>
 
 <script setup>
-import { Mail, Github, Linkedin } from "lucide-vue-next";
+import { icons } from "../../data/icons.js";
 import ContactButton from "../ContactButton.vue";
 
 const contacts = [
   {
     label: "Email",
-    icon: Mail,
+    icon: icons.Mail,
     href: "mailto:kwasnykarolina98@gmail.com",
     copyable: true,
     copyText: "kwasnykarolina98@gmail.com",
   },
   {
     label: "GitHub",
-    icon: Github,
+    icon: icons.Github,
     href: "https://github.com/karolinakwasny",
     copyable: true,
     copyText: "https://github.com/karolinakwasny",
   },
   {
     label: "LinkedIn",
-    icon: Linkedin,
+    icon: icons.Linkedin,
     href: "https://linkedin.com/in/kwasnykarolina",
     copyable: true,
     copyText: "https://linkedin.com/in/kwasnykarolina",

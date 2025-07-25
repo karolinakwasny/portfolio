@@ -46,6 +46,6 @@ const props = defineProps({
 defineEmits(["toggle-demo"]);
 
 const isInteractiveProject = computed(() => {
-  return ["ft_transcendence", "cub3d", "fractol", "so_long"].includes(props.project?.id);
+  return ["ft_transcendence"].includes(props.project?.id);
 });
 </script>
